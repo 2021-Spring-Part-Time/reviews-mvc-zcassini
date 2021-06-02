@@ -1,5 +1,6 @@
 package org.wecancoeit.reviews;
 
+
 import org.springframework.stereotype.Repository;
 
 import java.util.Arrays;
@@ -11,9 +12,9 @@ import java.util.Map;
 public class ReviewRepository {
     private Map<Long, Review> reviewList = new HashMap<Long, Review>();
 
-    public ReviewRepository(Review review) {
-        reviewList.put(review.id(), review);
-    }
+//    public ReviewRepository(Review review) {
+//        reviewList.put(review.id(), review);
+//    }
 
     public ReviewRepository(Review ...reviews) {
         Arrays.stream(reviews).forEach(review -> reviewList.put(review.id(), review));
