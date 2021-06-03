@@ -1,10 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+    <title th:text="${review.name()}">A review</title>
 </head>
 <body>
+
+<header>
+    <h1 th:text="${review.name}">A review</h1>
+</header>
+
+<main>
+    <div>
+        <p th:text="${review.name}"></p>
+        <p th:text="${review.category}"></p>
+        <p th:text="${review.content}"></p>
+        <p th:text="${review.image}"></p>
+    </div>
+    <p><a href="/reviews">Reviews</a></p>
+</main>
+
+<footer>
+    <small>Copyright South Harmon Institute of Technology 2018</small>
+</footer>
 
 </body>
 </html>

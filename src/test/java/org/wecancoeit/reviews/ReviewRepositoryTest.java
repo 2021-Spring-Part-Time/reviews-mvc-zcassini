@@ -9,8 +9,8 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ReviewRepositoryTest {
     ReviewRepository underTest;
-    Review reviewOne = new Review(1L, "Smalltalk");
-    Review reviewTwo = new Review(2L, "Clojure");
+    Review reviewOne = new Review(1L, "Smalltalk", Category.DYNAMIC, "lorem ipsum", "/images/smalltalk.jpg");
+    Review reviewTwo = new Review(2L, "Ruby", Category.DYNAMIC, "lorem ipsum", "/images/ruby.jpg");
 
     @Test
     public void shouldFindReviewOne() {
