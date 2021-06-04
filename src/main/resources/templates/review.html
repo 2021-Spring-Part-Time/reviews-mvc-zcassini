@@ -1,15 +1,14 @@
-<!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{/layouts/layout}">
+
 <head>
     <title th:text="${review.name()}">A review</title>
 </head>
 <body>
-
-<header>
+<main layout:fragment="content">
     <h1 th:text="${review.name}">A review</h1>
-</header>
-
-<main>
     <div>
         <p th:text="${review.name}"></p>
         <p th:text="${review.category}"></p>
@@ -18,10 +17,6 @@
     </div>
     <p><a href="/reviews">Reviews</a></p>
 </main>
-
-<footer>
-    <small>Copyright South Harmon Institute of Technology 2018</small>
-</footer>
 
 </body>
 </html>

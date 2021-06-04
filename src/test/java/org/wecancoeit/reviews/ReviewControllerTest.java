@@ -25,7 +25,9 @@ public class ReviewControllerTest {
     @Mock
     private Review reviewOne;
 
-    @Mock Review reviewTwo;
+    @Mock
+    private Review reviewTwo;
+
 
     @Test
     public void shouldBeOkForAllReviewsInTheReviewsTemplate() throws Exception {

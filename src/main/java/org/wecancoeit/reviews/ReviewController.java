@@ -15,7 +15,7 @@ public class ReviewController {
     @RequestMapping("/reviews")
     public String findAllReviews(Model model) {
        model.addAttribute("reviews", reviewRepository.findAll());
-       return "reviews";
+       return "/reviews";
     }
 
     @RequestMapping("/review")
