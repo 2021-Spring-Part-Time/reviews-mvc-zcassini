@@ -12,10 +12,10 @@ public class ReviewRepository {
     private Map<Long, Review> reviewList = new HashMap<>();
 
     public ReviewRepository() {
-        Review smalltalk = new Review(1L, "Smalltalk", Category.DYNAMIC, "lorem ipsum", "/images/smalltalk.svg");
-        Review ruby = new Review(2L, "Ruby", Category.DYNAMIC, "lorem ipsum", "/images/ruby.svg");
-        Review clojure = new Review(3L, "Clojure", Category.DYNAMIC, "lorem ipsum", "/images/clojure.svg");
-        Review java = new Review(4L, "Java", Category.STATIC, "lorem ipsum", "/images/java.svg");
+        Review smalltalk = new Review(1L, "Smalltalk", Category.DYNAMIC, "The King of OOP.", "/images/smalltalk.svg");
+        Review ruby = new Review(2L, "Ruby", Category.DYNAMIC, "Home of the best full stack web framework.", "/images/ruby.svg");
+        Review clojure = new Review(3L, "Clojure", Category.DYNAMIC, "Top notch LISP.  Top notch functional programming.", "/images/clojure.svg");
+        Review java = new Review(4L, "Java", Category.STATIC, "I guess it's better than writing C++.", "/images/java.svg");
 
         reviewList.put(smalltalk.id(), smalltalk);
         reviewList.put(ruby.id(), ruby);

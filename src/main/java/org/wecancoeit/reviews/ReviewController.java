@@ -12,7 +12,7 @@ public class ReviewController {
     @Resource
     private ReviewRepository reviewRepository;
 
-    @RequestMapping("/reviews")
+    @RequestMapping( { "/", "/reviews" } )
     public String findAllReviews(Model model) {
        model.addAttribute("reviews", reviewRepository.findAll());
        return "/reviews";
