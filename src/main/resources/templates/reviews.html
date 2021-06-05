@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorate="~{/layouts/layout}">
+      layout:decorate="~{layouts/layout}">
 <head>
     <title>Welcome to Our Site</title>
 </head>
 
 <main layout:fragment="content">
-    <article th:each="review: ${reviews}">
-        <a th:href="@{/review(id=${review.id})}" th:text="${review.name}"></a>
+    <article class="smallArticle" th:each="review: ${reviews}">
+        <a th:href="@{/review(id=${review.id})}"> 
+            <div>
+                <img class="smallLogo" th:src="${review.image}" alt="">
+
+                <span th:text="${review.name}"></span>
+            </div>
+        </a>
     </article>
 </main>
 </html>
