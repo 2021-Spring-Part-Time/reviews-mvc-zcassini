@@ -1,6 +1,5 @@
 package org.wecancoeit.reviews;
 
-
 import org.springframework.stereotype.Repository;
 
 import java.util.Arrays;
@@ -13,9 +12,9 @@ public class ReviewRepository {
     private Map<Long, Review> reviewList = new HashMap<>();
 
     public ReviewRepository() {
-        Review smalltalk = new Review(1L, "Smalltalk", Category.DYNAMIC, "lorem ipsum", "/images/csharp/svg");
+        Review smalltalk = new Review(1L, "Smalltalk", Category.DYNAMIC, "lorem ipsum", "/images/smalltalk.svg");
         Review ruby = new Review(2L, "Ruby", Category.DYNAMIC, "lorem ipsum", "/images/ruby.svg");
-        Review clojure = new Review(3L, "Clojure", Category.DYNAMIC, "lorem ipsum", "/images/haskell.svg");
+        Review clojure = new Review(3L, "Clojure", Category.DYNAMIC, "lorem ipsum", "/images/clojure.svg");
         Review java = new Review(4L, "Java", Category.STATIC, "lorem ipsum", "/images/java.svg");
 
         reviewList.put(smalltalk.id(), smalltalk);

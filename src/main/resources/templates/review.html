@@ -1,22 +1,25 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:th="http://www.thymeleaf.org"
-      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorate="~{/layouts/layout}">
-
-<head>
+<html
+  lang="en"
+  xmlns:th="http://www.thymeleaf.org"
+  xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+  layout:decorate="~{layouts/layout}"
+>
+  <head>
     <title th:text="${review.name()}">A review</title>
-</head>
-<body>
-<main layout:fragment="content">
-    <h1 th:text="${review.name}">A review</h1>
-    <div>
-        <p th:text="${review.name}"></p>
-        <p th:text="${review.category}"></p>
-        <p th:text="${review.content}"></p>
-        <p th:text="${review.image}"></p>
-    </div>
-    <p><a href="/reviews">Reviews</a></p>
-</main>
-
-</body>
+  </head>
+  <body>
+    <main layout:fragment="content">
+      <article class="largeArticle">
+        <div class="centeredDiv"><h2 th:text="${review.name}">A review</h2></div>
+        <div class="centeredDiv"><img class="smallLogo" th:src="${review.image}" alt="" /></div>
+          <div class="centeredDiv" th:switch="${review.category}">
+            <p th:case="'DYNAMIC'">A dynamically typed language</p>
+            <p th:case="'STATIC'">A statically typed language</p>
+          </div>
+          <p class="centeredDiv" th:text="${review.content}"></p>
+      </article>
+      <p><a href="/reviews">Reviews</a></p>
+    </main>
+  </body>
 </html>
